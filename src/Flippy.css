@@ -1,0 +1,51 @@
+.Flippy-container {
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, .25);
+    perspective: 1000px;
+    padding: 16px;
+}
+
+.Flippy-container, .Flippy-front, .Flippy-back {
+    color: white;
+    height: 500px;
+    width: 500px;
+}
+
+.Flippy {
+    transition: all .5s ease-in-out;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.Flippy-front, .Flippy-back {
+    background-color: darkslateblue;
+    border-radius: 2px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    padding-top: 8px;
+    top: 0px;
+    left: 0px;
+}
+
+.Flippy-front {
+    transform: rotateY(0deg);
+    z-index: 2;
+}
+
+.Flippy-back {
+    transform: rotateY(180deg);
+}
+
+.Flippy-flipped {
+    transform: rotateY(180deg);
+}
+
+.Flippy-close {
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 100;
+}
