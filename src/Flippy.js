@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Flippy.css'
 
-export default ({ children, front, back }) => {
+const Flippy = ({ front, back }) => {
     const [flipped, setFlipped] = useState(false)
 
     return (
@@ -18,3 +18,5 @@ export default ({ children, front, back }) => {
         </div>
     )
 }
+
+export default Flippy
