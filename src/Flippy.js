@@ -6,13 +6,14 @@ const Flippy = ({ front, back }) => {
 
     return (
         <div className={"Flippy-container"}>
-            <div className="Flippy-close" onClick={() => setFlipped(!flipped)}>🔄</div>
             <div className={["Flippy", flipped ? "Flippy-flipped" : ""].join(" ")}>
                 <div className={"Flippy-front"}>
                     {front}
+                    <div className="Flippy-close" onClick={() => setFlipped(!flipped)}>✏️ Edit Participants</div>
                 </div>
                 <div className={"Flippy-back"}>
                     {back}
+                    <div className="Flippy-close" onClick={() => setFlipped(!flipped)}>👀 See pairs</div>
                 </div>
             </div>
         </div>

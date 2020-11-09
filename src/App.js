@@ -83,7 +83,7 @@ function App() {
               <>
                 {Object.keys(people).sort().map((person, i) => (
                   <div className="flex edges" key={i} style={{ backgroundColor: i % 2 === 0 ? 'rgba(0, 0, 0, 0.2)' : '', padding: '4px' }}>
-                    {person} <span><span onClick={() => toggleActive(people[person])}>{people[person].active ? "😴" : "⏰"}</span> <span onClick={() => deletePerson(people[person])}>❌</span></span>
+                    {person} <span><span className="App-icon" onClick={() => toggleActive(people[person])}>{people[person].active ? "😴" : "⏰"}</span> <span className="App-icon" onClick={() => deletePerson(people[person])}>❌</span></span>
                   </div>
                 ))}
                 {newPersonName === -1 && <div className="App-new-person" onClick={() => setNewPersonName('')}>+ New Person</div>}
